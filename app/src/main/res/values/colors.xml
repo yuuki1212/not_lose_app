@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- アプリ -->
+    <color name="colorPrimary">#58e3ff</color>
+    <color name="colorPrimaryDark">#3d94a6</color>
+    <color name="colorAccent">#ffffff</color>
+    <color name="colorBack">#f2f2f2</color>
+
+    <!-- テキスト -->
+    <color name="colorTextMain">#000000</color>
+</resources>
