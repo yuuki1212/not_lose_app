@@ -42,7 +42,6 @@ public class LoginActivity extends Activity {
         mPasswordView  = findViewById(R.id.password);
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView  = findViewById(R.id.login_progress);
-        mProgressView.
 
         mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
