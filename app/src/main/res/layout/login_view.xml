@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorBack">
+    android:background="@color/colorPrimary">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,7 +15,7 @@
             style="?android:attr/progressBarStyleLarge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:visibility="visible"/>
+            android:visibility="gone"/>
     </LinearLayout>
     <LinearLayout
         android:id="@+id/login_form"
@@ -84,9 +84,9 @@
         <Button
             android:id="@+id/login_submit"
             android:paddingVertical="5dp"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
+            android:background="@drawable/login_submit_button_state"
             android:text="@string/login_submit"
             android:textSize="@dimen/submit_text_size"
             android:textColor="@color/colorAccent"
