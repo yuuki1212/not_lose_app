@@ -10,4 +10,9 @@
         android:angle="0"
         android:startColor="#0032fa"
         android:endColor="#4885ff"/>
+    <padding
+        android:top="10dp"
+        android:right="10dp"
+        android:left="10dp"
+        android:bottom="10dp"/>
 </shape>

@@ -21,65 +21,55 @@
         android:id="@+id/login_form"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:weightSum="1">
+        android:orientation="vertical">
         <LinearLayout
-            android:layout_marginTop="50dp"
+            android:paddingVertical="5dp"
             android:layout_width="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:layout_height="wrap_content">
-            <LinearLayout
-                android:paddingVertical="5dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:weightSum="4">
+            <TextView
+                android:gravity="center"
+                android:layout_weight="3"
+                android:textColor="@color/colorTextMain"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/colorAccent"
-                android:weightSum="4">
-                <TextView
-                    android:gravity="center"
-                    android:layout_weight="3"
-                    android:textColor="@color/colorTextMain"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="@string/text_email"/>
-                <EditText
-                    android:layout_weight="1"
-                    android:id="@+id/email"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:ems="10"
-                    android:textSize="@dimen/input_text_size"
-                    android:hint="@string/hint_email"
-                    android:inputType="textEmailAddress" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:paddingVertical="5dp"
-                android:layout_marginTop="3dp"
-                android:background="@color/colorAccent"
+                android:layout_height="match_parent"
+                android:text="@string/text_email"/>
+            <EditText
+                android:layout_weight="1"
+                android:id="@+id/email"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:weightSum="4">
-                <TextView
-                    android:gravity="center"
-                    android:layout_weight="3"
-                    android:textColor="@color/colorTextMain"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="@string/text_password"/>
-                <EditText
-                    android:layout_weight="1"
-                    android:id="@+id/password"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:textSize="@dimen/input_text_size"
-                    android:hint="@string/hint_password"
-                    android:inputType="textPassword" />
-
-            </LinearLayout>
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:textSize="@dimen/input_text_size"
+                android:hint="@string/hint_email"
+                android:inputType="textEmailAddress" />
         </LinearLayout>
 
+        <LinearLayout
+            android:paddingVertical="5dp"
+            android:layout_marginTop="3dp"
+            android:background="@color/colorAccent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="4">
+            <TextView
+                android:gravity="center"
+                android:layout_weight="3"
+                android:textColor="@color/colorTextMain"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/text_password"/>
+            <EditText
+                android:layout_weight="1"
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:textSize="@dimen/input_text_size"
+                android:hint="@string/hint_password"
+                android:inputType="textPassword" />
+        </LinearLayout>
 
         <Button
             android:id="@+id/login_submit"
@@ -91,6 +81,7 @@
             android:textSize="@dimen/submit_text_size"
             android:textColor="@color/colorAccent"
             android:textAllCaps="false"
+            android:textStyle="bold"
             tools:ignore="MissingConstraints"/>
     </LinearLayout>
 
