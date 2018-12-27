@@ -11,7 +11,6 @@ public class PreferenceUtil {
     // トークンファイル
     private static final String PREF_FILE_NAME = "token";
 
-    public static final String TOKEN_NAME_KEY = "token.name";           // トークン名
     public static final String ACCESS_TOKEN_KEY = "token.access";       // アクセストークン
     public static final String TOKEN_TYPE_KEY = "token.type";           // トークンタイプ
     public static final String EXPIRES_IN_KEY = "token.expire";

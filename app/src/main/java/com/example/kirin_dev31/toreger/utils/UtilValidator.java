@@ -1,7 +1,6 @@
 package com.example.kirin_dev31.toreger.utils;
 
 import android.content.Context;
-import android.view.View;
 import android.widget.TextView;
 
 import com.example.kirin_dev31.toreger.R;
@@ -18,11 +17,11 @@ public class UtilValidator {
     // 終了コード
     public static final String END = "end";
     // バリデーションコードに合うチェックロジックを実行
-    private static final Map<String, String> validators= new HashMap<String, String>();
+    private static final Map<String, Integer> validators= new HashMap<String, Integer>();
     static {
-        validators.put(REQUIRED, isNotNull());
-        validators.put(EMAIL, isEmailValid());
-        validators.put(HANKAKU, isHankaku());
+        validators.put(REQUIRED, 1);
+        validators.put(EMAIL, 2);
+        validators.put(HANKAKU, 3);
     }
     // Context
     private static Context context = null;
@@ -37,8 +36,8 @@ public class UtilValidator {
      *
      * @return
      */
-    private static String isNotNull() {
-        if (colum == null) {
+    private String isNotNull() {
+        if (colum == null | colum.isEmpty()) {
             return context.getString(R.string.valid_required);
         }
         return null;
@@ -48,7 +47,7 @@ public class UtilValidator {
      * Emailのバリデーション
      * @return
      */
-    private static String isEmailValid() {
+    private String isEmailValid() {
         if (!colum.contains("@")) {
             return context.getString(R.string.valid_email);
         }
@@ -59,8 +58,13 @@ public class UtilValidator {
      * 半角チェック
      * @return
      */
-    private static String isHankaku() {
-        if (!Pattern.matches("^[0-9a-zA-Z]+$", colum)) {
+    private String isHankaku() {
+        if (colum == null || colum.equals("")) {
+            return null;
+        }
+        String regText = "[ -~｡-ﾟ]+";
+        Pattern pattern = Pattern.compile(regText);
+        if (!pattern.matcher(colum).matches()) {
             return context.getString(R.string.valid_hankaku);
         }
         return null;
@@ -72,25 +76,44 @@ public class UtilValidator {
      * @return
      */
     public Map<TextView, String> validate(Map<TextView, String[]> validates) {
-        this.context = context;
         Map<TextView, String> result = new HashMap<TextView, String>();
 
         for(TextView key : validates.keySet()) {
             String value = validates.get(key)[0];
             String rule = validates.get(key)[1];
             colum = value;
-            for(String r : rule.split("|")) {
-                if (r == END) {
-                    break;
-                }
-                String message = validators.get(r);
-                if (message != null) {
-                    result.put(key, message);
-                    break;
+            for(String r : rule.split("/")) {
+                if (validators.containsKey(r)) {
+                    String message = validateExe(validators.get(r));
+                    if (r == END) {
+                        break;
+                    }
+                    if (message != null) {
+                        result.put(key, message);
+                        break;
+                    }
                 }
             }
         }
         return result;
+    }
+
+    /**
+     * バリデーション実行
+     * @param validCode
+     * @return
+     */
+    private String validateExe(int validCode) {
+        switch (validCode) {
+            case 1:
+                return isNotNull();
+            case 2:
+                return isEmailValid();
+            case 3:
+                return isHankaku();
+            default:
+        }
+        return null;
     }
 
     /**

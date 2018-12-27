@@ -3,8 +3,10 @@ package com.example.kirin_dev31.toreger.network.loaders;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.example.kirin_dev31.toreger.models.PreferenceUtil;
+import com.example.kirin_dev31.toreger.models.Token;
 import com.example.kirin_dev31.toreger.network.ServiceGenerater;
 import com.example.kirin_dev31.toreger.network.interfaces.ApiServices;
 import com.example.kirin_dev31.toreger.views.Constants;
@@ -25,17 +27,21 @@ public class LoginLoader extends BaseAsyncTaskLoader {
         ApiServices loginApi = ServiceGenerater.createService(ApiServices.class);
 
         // APIをコールする
-        Response<String> response = null;
+        Response<Token> response = null;
         try {
-            response = loginApi.login(this.args.getString(Constants.KEY_USER_ID), this.args.getString(Constants.KEY_PASSWORD)).execute();
+            response = loginApi.login(this.args.getString(Constants.KEY_USER_ID), this.args.getString(Constants.KEY_PASSWORD),
+                    ServiceGenerater.SESSION.GRANT_TYPE, ServiceGenerater.SESSION.CLIENT_ID,
+                    ServiceGenerater.SESSION.CLIENT_SECRET, ServiceGenerater.SESSION.SCOPE).execute();
             int code = response.code();
             if (response.isSuccessful()) {
+                Token token = response.body();
                 // レスポンスが取得できた場合
                 SharedPreferences.Editor editor = PreferenceUtil.getEditor(getContext());
-                System.out.println(response.body());
-//                            editor.putString(PreferenceUtil.ACCESS_TOKEN_KEY, response.body());
-//                            return;
-
+                editor.putString(PreferenceUtil.ACCESS_TOKEN_KEY, "Bearer " + token.access_token);
+                editor.putString(PreferenceUtil.REFRESH_TOKEN_KEY, token.refresh_token);
+                editor.putString(PreferenceUtil.EXPIRES_IN_KEY, token.expires_in);
+                editor.putString(PreferenceUtil.TOKEN_TYPE_KEY, token.token_type);
+                editor.apply();
             }
             if (code >= 200 && code < 300) {
             } else if (code == 401) {

@@ -8,12 +8,20 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ServiceGenerater {
     // host
-    public static final String HOST = "http://not_lose.jp";
+    public static final String HOST = "http://192.168.33.110";
 
     /**
      * セッション
      */
     public static final class SESSION {
+        // grant_type
+        public static final String GRANT_TYPE = "password";
+        // client_id
+        public static final String CLIENT_ID = "3";
+        // client_secret
+        public static final String CLIENT_SECRET = "fR6NVyw7nvqB09exlwpqDOyDxDLlit1JnvJbjrPN";
+        // scope
+        public static final String SCOPE = "*";
         // ログイン（アクセストークンの取得）
         public static final String LOGIN = "/oauth/token";
         // ユーザー情報の取得

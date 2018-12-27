@@ -75,8 +75,8 @@ public class LoginActivity extends Activity {
         View focusView = null;
         Map<TextView, String[]> validates = new HashMap<TextView, String[]>();
         // バリデーションルール
-        String[] email_param = {email, "required|email|hankaku"};
-        String[] password_param = {password, "required|hankaku"};
+        String[] email_param = {email, "required/email/hankaku"};
+        String[] password_param = {password, "required/hankaku"};
         validates.put(mEmailView, email_param);
         validates.put(mPasswordView, password_param);
 
@@ -85,8 +85,8 @@ public class LoginActivity extends Activity {
         Map<TextView, String> validateResponse = validator.validate(validates);
 
         for (TextView key : validateResponse.keySet()) {
-            key.setError(validateResponse.get(key));
             cancel = true;
+            key.setError(validateResponse.get(key));
             focusView = key;
         }
 
@@ -140,19 +140,19 @@ public class LoginActivity extends Activity {
         }
     }
 
-    private final LoaderManager.LoaderCallbacks<User> mCallBack = new LoaderManager.LoaderCallbacks<User>() {
+    private final LoaderManager.LoaderCallbacks<String> mCallBack = new LoaderManager.LoaderCallbacks<String>() {
 
         @Override
-        public Loader<User> onCreateLoader(int id, Bundle args) {
+        public Loader<String> onCreateLoader(int id, Bundle args) {
             return new LoginLoader(LoginActivity.this, args);
         }
 
         @Override
-        public void onLoadFinished(Loader<User> loader, User user) {
+        public void onLoadFinished(Loader<String> loader, String message) {
             // ローダーの破棄
             getLoaderManager().destroyLoader(loader.getId());
             Intent intent = null;
-            if (user == null) {
+            if (message != null && !message.isEmpty()) {
             } else {
                 intent = new Intent(getApplicationContext(), MainActivity.class);
             }
@@ -163,7 +163,7 @@ public class LoginActivity extends Activity {
         }
 
         @Override
-        public void onLoaderReset(Loader<User> loader) {
+        public void onLoaderReset(Loader<String> loader) {
 
         }
     };

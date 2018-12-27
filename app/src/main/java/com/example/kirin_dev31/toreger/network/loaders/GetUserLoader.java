@@ -2,6 +2,7 @@ package com.example.kirin_dev31.toreger.network.loaders;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.example.kirin_dev31.toreger.models.User;
 import com.example.kirin_dev31.toreger.network.ServiceGenerater;
@@ -23,7 +24,6 @@ public class GetUserLoader extends BaseAsyncTaskLoader {
         try {
             // APIをコールする
             Response<User> response = getUserApi.getUser(this.args.getString(Constants.KEY_TOKEN)).execute();
-
             if (response.isSuccessful()) {
                 return response.body();
             }

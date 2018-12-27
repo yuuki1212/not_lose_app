@@ -1,8 +1,8 @@
 package com.example.kirin_dev31.toreger.network.interfaces;
 
+import com.example.kirin_dev31.toreger.models.Token;
 import com.example.kirin_dev31.toreger.models.User;
 import com.example.kirin_dev31.toreger.network.ServiceGenerater;
-import com.example.kirin_dev31.toreger.views.Constants;
 
 import retrofit2.Call;
 import retrofit2.http.Field;
@@ -17,7 +17,13 @@ public interface ApiServices {
     @GET(ServiceGenerater.SESSION.USER_INFO)
     Call<User> getUser(@Header("Authorization") String authorization);
 
+    @Headers("Accept: application/json")
     @FormUrlEncoded
     @POST(ServiceGenerater.SESSION.LOGIN)
-    Call<String> login(@Field(Constants.KEY_USER_ID) String user_id, @Field(Constants.KEY_PASSWORD) String password);
+    Call<Token> login(@Field("username") String user_id,
+                      @Field("password") String password,
+                      @Field("grant_type") String grant_type,
+                      @Field("client_id") String client_id,
+                      @Field("client_secret") String client_secret,
+                      @Field("scope") String scope);
 }
