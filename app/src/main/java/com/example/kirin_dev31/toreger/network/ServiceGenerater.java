@@ -8,14 +8,16 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ServiceGenerater {
     // host
-    public static final String HOST = "http://192.168.33.110";
+    public static final String HOST = "http://not_lose.jp";
 
     /**
      * セッション
      */
     public static final class SESSION {
+        // ログイン（アクセストークンの取得）
+        public static final String LOGIN = "/oauth/token";
         // ユーザー情報の取得
-        public static final String LOGIN = "/session/login";
+        public static final String USER_INFO = "/api/user";
     }
 
     private static OkHttpClient httpClient = OkHttpSingleton.getInstance().getOkHttpClient();

@@ -12,16 +12,12 @@ import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
-import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.example.kirin_dev31.toreger.R;
 import com.example.kirin_dev31.toreger.models.User;
-import com.example.kirin_dev31.toreger.network.ServiceGenerater;
 import com.example.kirin_dev31.toreger.network.loaders.LoginLoader;
 import com.example.kirin_dev31.toreger.utils.UtilValidator;
 import com.example.kirin_dev31.toreger.views.Constants;
@@ -40,7 +36,7 @@ public class LoginActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.login_view);
 
         mEmailView     = findViewById(R.id.email);
         mPasswordView  = findViewById(R.id.password);

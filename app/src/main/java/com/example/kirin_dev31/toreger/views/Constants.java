@@ -6,10 +6,9 @@ package com.example.kirin_dev31.toreger.views;
 public final class Constants {
     private Constants(){}
 
-    // ユーザーIDのKEY
-    public static final String KEY_USER_ID = "user_id";
-    // パスワード
-    public static final String KEY_PASSWORD = "password";
+    public static final String KEY_USER_ID = "user_id";         // ユーザーID（email）
+    public static final String KEY_PASSWORD = "password";       // パスワード
+    public static final String KEY_TOKEN = "token";             // トークン
 
     public static class Message {
 
@@ -20,7 +19,9 @@ public final class Constants {
      */
     public static class LOADER_ID {
         // ログイン
-        public static final int LOADER_LOGIN_ID = 0;
+        public static final int LOADER_LOGIN_ID = 1;
+        // ユーザー情報取得
+        public static final int LOADER_USER_INFO_ID = 2;
     }
 
     /**

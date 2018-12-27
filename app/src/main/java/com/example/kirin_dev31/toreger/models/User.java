@@ -4,17 +4,19 @@ public class User {
     // ID デフォルト値は-1
     private int id = -1;
     // ユーザーID
-    private String userId = "";
+    private String email = "";
     // パスワード
     private String password = "";
-    // メールアドレス
-    private String mailAddress = "";
     // 電話番号
-    private String phoneCode = "";
+    private String phone = "";
     // 姓
-    private String lastName = "";
+    private String last_name = "";
     // 名
-    private String firstName = "";
+    private String first_name = "";
+    // 姓カナ
+    private String last_name_kana = "";
+    // 名カナ
+    private String first_name_kana = "";
     // 年齢
     private int age;
     // 性別
@@ -36,12 +38,12 @@ public class User {
         this.id = id;
     }
 
-    public String getUserId() {
-        return userId;
+    public String getEmail() {
+        return email;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getPassword() {
@@ -52,36 +54,28 @@ public class User {
         this.password = password;
     }
 
-    public String getMailAddress() {
-        return mailAddress;
-    }
-
-    public void setMailAddress(String mailAddress) {
-        this.mailAddress = mailAddress;
-    }
-
     public String getPhoneCode() {
-        return phoneCode;
+        return phone;
     }
 
-    public void setPhoneCode(String phoneCode) {
-        this.phoneCode = phoneCode;
+    public void setPhoneCode(String phone) {
+        this.phone = phone;
     }
 
     public String getLastName() {
-        return lastName;
+        return last_name;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setLastName(String last_name) {
+        this.last_name = last_name;
     }
 
     public String getFirstName() {
-        return firstName;
+        return first_name;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setFirstName(String first_name) {
+        this.first_name = first_name;
     }
 
     public int getAge() {
@@ -130,5 +124,21 @@ public class User {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public String getLastNameKana() {
+        return last_name_kana;
+    }
+
+    public void setLastNameKana(String last_name_kana) {
+        this.last_name_kana = last_name_kana;
+    }
+
+    public String getFirstNameKana() {
+        return first_name_kana;
+    }
+
+    public void setFirstNameKana(String first_name_kana) {
+        this.first_name_kana = first_name_kana;
     }
 }
