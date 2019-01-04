@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- アプリ -->
-    <color name="colorPrimary">#58e3ff</color>
-    <color name="colorPrimaryDark">#3d94a6</color>
+    <color name="colorPrimary">#96edff</color>
+    <color name="colorPrimaryDark">#58e3ff</color>
     <color name="colorAccent">#ffffff</color>
     <color name="colorBack">#f2f2f2</color>
 

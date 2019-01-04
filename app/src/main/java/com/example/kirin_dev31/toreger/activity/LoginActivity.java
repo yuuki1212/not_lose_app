@@ -37,11 +37,8 @@ public class LoginActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_view);
-
         mEmailView     = findViewById(R.id.email);
         mPasswordView  = findViewById(R.id.password);
-        mLoginFormView = findViewById(R.id.login_form);
-        mProgressView  = findViewById(R.id.login_progress);
         mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
@@ -61,7 +58,7 @@ public class LoginActivity extends Activity {
             }
         });
 
-        mProgressView = findViewById(R.id.login_progress);
+        mProgressView = findViewById(R.id.auth_progress);
         mLoginFormView = findViewById(R.id.login_form);
     }
 
