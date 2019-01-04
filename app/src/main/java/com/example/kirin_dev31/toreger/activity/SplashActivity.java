@@ -23,7 +23,7 @@ public class SplashActivity extends Activity{
 
         // Preferenceからアクセストークンの取得
         String token = PreferenceUtil.getFindById(this, PreferenceUtil.ACCESS_TOKEN_KEY);
-        if (token == null) {
+        if (token != null) {
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {

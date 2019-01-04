@@ -45,6 +45,7 @@ public class LoginLoader extends BaseAsyncTaskLoader {
             }
             if (code >= 200 && code < 300) {
             } else if (code == 401) {
+                message = "Email又はパスワードが正しくありません。";
             } else if (code >= 400 && code < 500) {
             } else if (code >= 500 && code < 600) {
             } else {

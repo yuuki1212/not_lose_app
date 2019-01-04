@@ -2,8 +2,6 @@ package com.example.kirin_dev31.toreger.network.loaders;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.util.Log;
-
 import com.example.kirin_dev31.toreger.models.User;
 import com.example.kirin_dev31.toreger.network.ServiceGenerater;
 import com.example.kirin_dev31.toreger.network.interfaces.ApiServices;
@@ -27,6 +25,7 @@ public class GetUserLoader extends BaseAsyncTaskLoader {
             if (response.isSuccessful()) {
                 return response.body();
             }
+// レスポンスが取得できた場合
             int code = response.code();
             if (code >= 200 && code < 300) {
             } else if (code == 401) {

@@ -152,9 +152,10 @@ public class LoginActivity extends Activity {
             // ローダーの破棄
             getLoaderManager().destroyLoader(loader.getId());
             Intent intent = null;
-            if (message != null && !message.isEmpty()) {
-            } else {
+            if (message.isEmpty()) {
                 intent = new Intent(getApplicationContext(), MainActivity.class);
+            } else {
+
             }
 
             startActivity(intent);
