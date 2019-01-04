@@ -1,4 +1,4 @@
-package com.example.kirin_dev31.toreger.activity;
+package com.example.kirin_dev31.toreger.activity.splash;
 
 import android.app.Activity;
 import android.app.LoaderManager;
@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.os.Handler;
 
 import com.example.kirin_dev31.toreger.R;
+import com.example.kirin_dev31.toreger.activity.LoginActivity;
+import com.example.kirin_dev31.toreger.activity.MainActivity;
 import com.example.kirin_dev31.toreger.models.PreferenceUtil;
 import com.example.kirin_dev31.toreger.models.User;
 import com.example.kirin_dev31.toreger.network.loaders.GetUserLoader;
