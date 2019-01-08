@@ -10,6 +10,7 @@ import android.os.Handler;
 import com.example.kirin_dev31.toreger.R;
 import com.example.kirin_dev31.toreger.activity.LoginActivity;
 import com.example.kirin_dev31.toreger.activity.MainActivity;
+import com.example.kirin_dev31.toreger.activity.authorization.AuthorizationActivity;
 import com.example.kirin_dev31.toreger.models.PreferenceUtil;
 import com.example.kirin_dev31.toreger.models.User;
 import com.example.kirin_dev31.toreger.network.loaders.GetUserLoader;
@@ -30,7 +31,7 @@ public class SplashActivity extends Activity{
                 @Override
                 public void run() {
                     // 取得できなければログイン画面に遷移
-                    Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                    Intent intent = new Intent(getApplicationContext(), AuthorizationActivity.class);
                     startActivity(intent);
                     SplashActivity.this.finish();
                 }
@@ -58,7 +59,7 @@ public class SplashActivity extends Activity{
 
             if (user == null) {
                 // ユーザーが取得できなかった場合
-                intent = new Intent(getApplicationContext(), LoginActivity.class);
+                intent = new Intent(getApplicationContext(), AuthorizationActivity.class);
             } else {
                 // ログイン処理が完了
                 intent = new Intent(getApplicationContext(), MainActivity.class);

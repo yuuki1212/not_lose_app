@@ -1,6 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
+    buildToolsVersion '28.0.3'
+    flavorDimensions "source"
+    productFlavors {
+        free {
+            dimension "source"
+        }
+    }
     compileSdkVersion 27
     defaultConfig {
         applicationId "com.example.kirin_dev31.toreger"
