@@ -1,4 +1,4 @@
-package com.example.kirin_dev31.toreger.activity.authorization;
+package com.example.kirin_dev31.toreger.fragments.authorization;
 
 import android.app.Fragment;
 import android.os.Bundle;

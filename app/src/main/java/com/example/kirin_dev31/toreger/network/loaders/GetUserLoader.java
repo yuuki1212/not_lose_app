@@ -35,6 +35,8 @@ public class GetUserLoader extends BaseAsyncTaskLoader {
             }
         } catch (IOException e) {
             e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
 
         return null;

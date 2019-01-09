@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- 共通 -->
+    <dimen name="text_size_small">5dp</dimen>
+    <dimen name="text_size_midium">10dp</dimen>
+    <dimen name="text_size_large">15dp</dimen>
     <!-- 文字の大きさ -->
     <dimen name="input_text_size">20sp</dimen>
     <dimen name="submit_text_size">40sp</dimen>
