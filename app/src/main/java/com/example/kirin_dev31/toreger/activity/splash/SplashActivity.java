@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.os.Handler;
 
 import com.example.kirin_dev31.toreger.R;
-import com.example.kirin_dev31.toreger.activity.LoginActivity;
 import com.example.kirin_dev31.toreger.activity.MainActivity;
 import com.example.kirin_dev31.toreger.activity.authorization.AuthorizationActivity;
 import com.example.kirin_dev31.toreger.models.PreferenceUtil;

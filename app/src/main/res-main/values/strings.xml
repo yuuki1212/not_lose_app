@@ -10,6 +10,7 @@
     <string name="hint_password">半角英数字8文字以上</string>
     <string name="login_submit">ログイン</string>
     <string name="title_activity_login2">Sign in</string>
+    <string name="register_text_link">新規登録はこちら</string>
 
     <!-- バリデーションメッセージ -->
     <string name="valid_email">Emailアドレスが正しくありません</string>

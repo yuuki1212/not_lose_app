@@ -2,10 +2,7 @@ package com.example.kirin_dev31.toreger.activity.authorization;
 
 import android.app.Activity;
 import android.app.Fragment;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.transition.Slide;
 import android.transition.TransitionSet;
 import android.view.Gravity;
