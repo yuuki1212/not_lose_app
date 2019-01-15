@@ -25,10 +25,12 @@ android {
     }
     sourceSets {
         main {
-            res.srcDirs += 'src/main/res-main'
-            file('src/main/res-screen')
-                    .listFiles()
-                    .each { res.srcDirs += it.path }
+            res.srcDirs = [
+                'src/main/res-main',
+                'src/main/res-screen/splash',
+                'src/main/res-screen/authorization',
+                'src/main/res-screen/home'
+            ]
         }
     }
 }

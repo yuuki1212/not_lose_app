@@ -71,7 +71,7 @@ public class LoginFragment extends Fragment {
         });
 
         // 新規登録フラグメントの起動
-        getActivity().findViewById(R.id.register_link).setOnClickListener(new View.OnClickListener() {
+        view.findViewById(R.id.register_link).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Slide slide = new Slide();
@@ -82,8 +82,9 @@ public class LoginFragment extends Fragment {
 
                 Fragment fragment = new RegisterFragment();
                 fragment.setEnterTransition(set);
+                fragment.setExitTransition(set);
                 getFragmentManager().beginTransaction()
-                        .add(R.id.login_layout, fragment).commit();
+                        .add(R.id.register_layout, fragment).addToBackStack("").commit();
             }
         });
 

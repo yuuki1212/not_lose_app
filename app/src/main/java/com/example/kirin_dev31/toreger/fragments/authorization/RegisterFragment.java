@@ -3,6 +3,9 @@ package com.example.kirin_dev31.toreger.fragments.authorization;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.transition.Slide;
+import android.transition.TransitionSet;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,11 +26,18 @@ public class RegisterFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         // 閉じるボタン
-        getActivity().findViewById(R.id.register_close).setOnClickListener(new View.OnClickListener() {
+        view.findViewById(R.id.register_close).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getActivity().getFragmentManager().beginTransaction()
+                close();
             }
         });
+    }
+
+    /**
+     * 閉じるボタン押下時
+     */
+    public void close() {
+        getActivity().getFragmentManager().beginTransaction().remove(this).commit();
     }
 }
