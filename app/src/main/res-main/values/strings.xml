@@ -14,6 +14,6 @@
 
     <!-- バリデーションメッセージ -->
     <string name="valid_email">Emailアドレスが正しくありません</string>
-    <string name="valid_required">必須項目です。</string>
+    <string name="valid_required">必須項目です</string>
     <string name="valid_hankaku">半角英数字で入力して下さい。</string>
 </resources>

@@ -20,9 +20,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.kirin_dev31.toreger.R;
-import com.example.kirin_dev31.toreger.activity.LoginActivity;
 import com.example.kirin_dev31.toreger.activity.MainActivity;
-import com.example.kirin_dev31.toreger.activity.authorization.AuthorizationActivity;
 import com.example.kirin_dev31.toreger.network.loaders.LoginLoader;
 import com.example.kirin_dev31.toreger.utils.UtilValidator;
 import com.example.kirin_dev31.toreger.views.Constants;
