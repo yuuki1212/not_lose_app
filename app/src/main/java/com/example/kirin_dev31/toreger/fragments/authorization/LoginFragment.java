@@ -10,6 +10,9 @@ import android.content.Loader;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.transition.Slide;
+import android.transition.TransitionSet;
+import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -64,6 +67,23 @@ public class LoginFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 attemptLogin();
+            }
+        });
+
+        // 新規登録フラグメントの起動
+        getActivity().findViewById(R.id.register_link).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Slide slide = new Slide();
+                slide.setSlideEdge(Gravity.BOTTOM);
+
+                TransitionSet set = new TransitionSet();
+                set.addTransition(slide);
+
+                Fragment fragment = new RegisterFragment();
+                fragment.setEnterTransition(set);
+                getFragmentManager().beginTransaction()
+                        .add(R.id.login_layout, fragment).commit();
             }
         });
 

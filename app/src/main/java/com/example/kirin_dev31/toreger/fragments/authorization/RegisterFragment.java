@@ -22,5 +22,12 @@ public class RegisterFragment extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        // 閉じるボタン
+        getActivity().findViewById(R.id.register_close).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().getFragmentManager().beginTransaction()
+            }
+        });
     }
 }
