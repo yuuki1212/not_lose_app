@@ -4,12 +4,6 @@ import android.content.AsyncTaskLoader;
 import android.content.Context;
 import android.os.Bundle;
 
-import com.example.kirin_dev31.toreger.network.ServiceGenerater;
-import com.example.kirin_dev31.toreger.views.Constants;
-
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
-
 public abstract class BaseAsyncTaskLoader<D> extends AsyncTaskLoader<D> {
 
     private D mResult;

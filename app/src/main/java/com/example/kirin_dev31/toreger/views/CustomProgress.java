@@ -1,4 +1,4 @@
-package com.example.kirin_dev31.toreger.utils;
+package com.example.kirin_dev31.toreger.views;
 
 import android.content.Context;
 import android.support.annotation.Nullable;

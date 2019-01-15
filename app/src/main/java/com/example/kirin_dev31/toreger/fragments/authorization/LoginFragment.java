@@ -26,7 +26,7 @@ import com.example.kirin_dev31.toreger.R;
 import com.example.kirin_dev31.toreger.activity.MainActivity;
 import com.example.kirin_dev31.toreger.network.loaders.LoginLoader;
 import com.example.kirin_dev31.toreger.utils.UtilValidator;
-import com.example.kirin_dev31.toreger.views.Constants;
+import com.example.kirin_dev31.toreger.utils.Constants;
 
 import java.util.HashMap;
 import java.util.Map;

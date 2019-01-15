@@ -1,4 +1,4 @@
-package com.example.kirin_dev31.toreger.views;
+package com.example.kirin_dev31.toreger.utils;
 
 /**
  * 定数クラス

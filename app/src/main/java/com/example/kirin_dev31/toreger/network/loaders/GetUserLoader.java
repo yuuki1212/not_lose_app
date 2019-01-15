@@ -5,7 +5,7 @@ import android.os.Bundle;
 import com.example.kirin_dev31.toreger.models.User;
 import com.example.kirin_dev31.toreger.network.ServiceGenerater;
 import com.example.kirin_dev31.toreger.network.interfaces.ApiServices;
-import com.example.kirin_dev31.toreger.views.Constants;
+import com.example.kirin_dev31.toreger.utils.Constants;
 
 import java.io.IOException;
 import retrofit2.Response;

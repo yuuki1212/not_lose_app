@@ -3,13 +3,12 @@ package com.example.kirin_dev31.toreger.network.loaders;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 
 import com.example.kirin_dev31.toreger.models.PreferenceUtil;
 import com.example.kirin_dev31.toreger.models.Token;
 import com.example.kirin_dev31.toreger.network.ServiceGenerater;
 import com.example.kirin_dev31.toreger.network.interfaces.ApiServices;
-import com.example.kirin_dev31.toreger.views.Constants;
+import com.example.kirin_dev31.toreger.utils.Constants;
 
 import java.io.IOException;
 

@@ -5,7 +5,7 @@ import android.content.res.AssetManager;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.example.kirin_dev31.toreger.views.Constants;
+import com.example.kirin_dev31.toreger.utils.Constants;
 
 import java.io.BufferedReader;
 import java.io.IOException;

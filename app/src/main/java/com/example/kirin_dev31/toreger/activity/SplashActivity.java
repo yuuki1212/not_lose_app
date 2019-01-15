@@ -1,4 +1,4 @@
-package com.example.kirin_dev31.toreger.activity.splash;
+package com.example.kirin_dev31.toreger.activity;
 
 import android.app.Activity;
 import android.app.LoaderManager;
@@ -8,12 +8,10 @@ import android.os.Bundle;
 import android.os.Handler;
 
 import com.example.kirin_dev31.toreger.R;
-import com.example.kirin_dev31.toreger.activity.MainActivity;
-import com.example.kirin_dev31.toreger.activity.authorization.AuthorizationActivity;
 import com.example.kirin_dev31.toreger.models.PreferenceUtil;
 import com.example.kirin_dev31.toreger.models.User;
 import com.example.kirin_dev31.toreger.network.loaders.GetUserLoader;
-import com.example.kirin_dev31.toreger.views.Constants;
+import com.example.kirin_dev31.toreger.utils.Constants;
 
 
 public class SplashActivity extends Activity{

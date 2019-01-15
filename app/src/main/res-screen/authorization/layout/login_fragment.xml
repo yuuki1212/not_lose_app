@@ -7,7 +7,7 @@
     android:background="@color/colorPrimary"
     android:orientation="horizontal">
 
-    <com.example.kirin_dev31.toreger.utils.CustomProgress
+    <com.example.kirin_dev31.toreger.views.CustomProgress
         android:id="@+id/auth_progress"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -86,7 +86,7 @@
             android:textAllCaps="false"
             android:textStyle="bold"
             tools:ignore="MissingConstraints"/>
-        <com.example.kirin_dev31.toreger.utils.CustomLineTextView
+        <com.example.kirin_dev31.toreger.views.CustomLineTextView
             android:id="@+id/register_link"
             android:layout_gravity="center"
             android:layout_width="wrap_content"
