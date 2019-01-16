@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:ignore="MissingConstraints"
-    tools:context=".activity.MainActivity"
+    tools:context=".views.activity.MainActivity"
     android:background="@color/colorAccent">
     <LinearLayout
         android:layout_width="match_parent"
