@@ -59,7 +59,7 @@ public class SplashActivity extends Activity{
                 intent = new Intent(getApplicationContext(), AuthorizationActivity.class);
             } else {
                 // ログイン処理が完了
-                intent = new Intent(getApplicationContext(), MainActivity.class);
+                intent = new Intent(getApplicationContext(), HomeActivity.class);
             }
             // アクティビティの起動
             startActivity(intent);

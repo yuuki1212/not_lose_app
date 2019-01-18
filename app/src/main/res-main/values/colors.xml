@@ -9,4 +9,7 @@
     <!-- テキスト -->
     <color name="colorTextMain">#000000</color>
     <color name="colorTextLink">#8b8b8b</color>
+
+    <!-- アイコン -->
+    <color name="colorIcPrimaryDark">#00c490</color>
 </resources>

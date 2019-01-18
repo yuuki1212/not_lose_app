@@ -23,6 +23,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.kirin_dev31.toreger.R;
+import com.example.kirin_dev31.toreger.views.activity.HomeActivity;
 import com.example.kirin_dev31.toreger.views.activity.MainActivity;
 import com.example.kirin_dev31.toreger.domain.network.loaders.LoginLoader;
 import com.example.kirin_dev31.toreger.util.UtilValidator;
@@ -179,13 +180,12 @@ public class LoginFragment extends Fragment {
         public void onLoadFinished(Loader<String> loader, String message) {
             // ローダーの破棄
             getLoaderManager().destroyLoader(loader.getId());
-            Intent intent = null;
-            if (message.isEmpty()) {
-                intent = new Intent(getContext(), MainActivity.class);
-            } else {
-
+            if (!message.isEmpty()) {
+                showProgress(false);
+                return;
             }
 
+            Intent intent = new Intent(getContext(), HomeActivity.class);
             startActivity(intent);
             getActivity().finish();
             showProgress(false);
