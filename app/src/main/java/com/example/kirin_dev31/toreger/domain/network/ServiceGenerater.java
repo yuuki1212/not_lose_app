@@ -22,10 +22,6 @@ public class ServiceGenerater {
         public static final String CLIENT_SECRET = "fR6NVyw7nvqB09exlwpqDOyDxDLlit1JnvJbjrPN";
         // scope
         public static final String SCOPE = "*";
-        // ログイン（アクセストークンの取得）
-        public static final String LOGIN = "/oauth/token";
-        // ユーザー情報の取得
-        public static final String USER_INFO = "/api/user";
     }
 
     private static OkHttpClient httpClient = OkHttpSingleton.getInstance().getOkHttpClient();

@@ -3,7 +3,6 @@ package com.example.kirin_dev31.toreger.views.fragments.home;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,7 +10,6 @@ import android.widget.GridView;
 
 import com.example.kirin_dev31.toreger.R;
 import com.example.kirin_dev31.toreger.domain.models.GridItem;
-import com.example.kirin_dev31.toreger.domain.models.Space;
 import com.example.kirin_dev31.toreger.views.adapter.GridItemAdapter;
 
 import java.util.ArrayList;
@@ -45,9 +43,8 @@ public class GridFragment extends Fragment {
             } else {
                 List<GridItem> itemList = new ArrayList<GridItem>();
                 for (int i = 0; i < 5; i++) {
-                    Log.d("debug1111111111111", "-----------------------------------------------------------");
                     GridItem item = new GridItem();
-                    Space space = new Space();
+                    GridItem.Space space = new GridItem.Space();
                     space.name = "1";
                     item.space = space;
                     itemList.add(item);
