@@ -1,10 +1,11 @@
-package com.example.kirin_dev31.toreger.domain.network.loaders;
+package com.example.kirin_dev31.toreger.domain.network.loaders.auth;
 
 import android.content.Context;
 import android.os.Bundle;
 import com.example.kirin_dev31.toreger.domain.models.User;
 import com.example.kirin_dev31.toreger.domain.network.ServiceGenerater;
 import com.example.kirin_dev31.toreger.domain.network.interfaces.ApiServices;
+import com.example.kirin_dev31.toreger.domain.network.loaders.BaseAsyncTaskLoader;
 import com.example.kirin_dev31.toreger.util.Constants;
 
 import java.io.IOException;

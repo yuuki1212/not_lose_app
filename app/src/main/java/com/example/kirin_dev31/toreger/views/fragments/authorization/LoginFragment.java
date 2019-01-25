@@ -1,5 +1,7 @@
 package com.example.kirin_dev31.toreger.views.fragments.authorization;
 
+import android.accounts.Account;
+import android.accounts.AccountManager;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
@@ -23,9 +25,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.kirin_dev31.toreger.R;
+import com.example.kirin_dev31.toreger.domain.network.ServiceGenerater;
 import com.example.kirin_dev31.toreger.views.activity.HomeActivity;
-import com.example.kirin_dev31.toreger.views.activity.MainActivity;
-import com.example.kirin_dev31.toreger.domain.network.loaders.LoginLoader;
+import com.example.kirin_dev31.toreger.domain.network.loaders.auth.LoginLoader;
 import com.example.kirin_dev31.toreger.util.UtilValidator;
 import com.example.kirin_dev31.toreger.util.Constants;
 
@@ -189,6 +191,10 @@ public class LoginFragment extends Fragment {
             startActivity(intent);
             getActivity().finish();
             showProgress(false);
+            Account account = new Account(mEmailView.getText().toString(), "remodelingApp");
+            AccountManager manager = AccountManager.get(getContext());
+            manager.addAccountExplicitly(account, mPasswordView.getText().toString(), null);
+            manager.setAuthToken(account, ServiceGenerater.SESSION.SCOPE, message);
         }
 
         @Override

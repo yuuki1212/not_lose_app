@@ -48,7 +48,6 @@ public class GridItemAdapter extends BaseAdapter {
             int screenWidth = size.x;
             this.screenWidthHalf = screenWidth/2;
         }
-
     }
 
     @Override

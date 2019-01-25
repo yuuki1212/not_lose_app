@@ -1,6 +1,6 @@
 package com.example.kirin_dev31.toreger.domain.models;
 
-public class User {
+public class User extends ApiModel {
     // ID デフォルト値は-1
     public int id = -1;
     // ユーザーID

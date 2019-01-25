@@ -4,6 +4,8 @@ import com.example.kirin_dev31.toreger.domain.models.GridItem;
 import com.example.kirin_dev31.toreger.domain.models.Token;
 import com.example.kirin_dev31.toreger.domain.models.User;
 
+import java.util.List;
+
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
@@ -11,6 +13,7 @@ import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.Headers;
 import retrofit2.http.POST;
+import retrofit2.http.Path;
 import retrofit2.http.Query;
 
 public interface ApiServices {
@@ -54,11 +57,11 @@ public interface ApiServices {
      * @return
      */
     @Headers("Accept: applivation/json")
-    @GET("/api/space/")
-    Call<GridItem.Space> getSpace(@Header("Authorization") String authorization,
-                                  @Query("category_id") String category,
-                                  @Query("user_id") int user_id,
-                                  @Query("usages_id") int usages_id,
-                                  @Query("main_no") int main_no,
-                                  @Query("tree_no") int tree_no);
+    @GET("/api/home/{space_id}")
+    Call<List<GridItem>> getSpaceItem(@Path ("space_id") int space_id, @Header("Authorization") String authorization,
+                                      @Query("category_id") String category,
+                                      @Query("user_id") int user_id,
+                                      @Query("usages_id") int usages_id,
+                                      @Query("main_no") int main_no,
+                                      @Query("tree_no") int tree_no);
 }

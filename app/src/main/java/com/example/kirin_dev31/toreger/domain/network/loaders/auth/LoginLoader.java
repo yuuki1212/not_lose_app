@@ -1,9 +1,10 @@
-package com.example.kirin_dev31.toreger.domain.network.loaders;
+package com.example.kirin_dev31.toreger.domain.network.loaders.auth;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
+import com.example.kirin_dev31.toreger.domain.network.loaders.BaseAsyncTaskLoader;
 import com.example.kirin_dev31.toreger.domain.prefs.PreferenceUtil;
 import com.example.kirin_dev31.toreger.domain.models.Token;
 import com.example.kirin_dev31.toreger.domain.network.ServiceGenerater;

@@ -8,14 +8,14 @@ import android.content.SharedPreferences;
  */
 public class PreferenceUtil {
 
-    // トークンファイル
-    private static final String PREF_FILE_NAME = "token";
+    // ファイル
+    private static final String PREF_TOKEN_FILE = "token";              // トークンファイル
 
+    // キー
     public static final String ACCESS_TOKEN_KEY = "token.access";       // アクセストークン
     public static final String TOKEN_TYPE_KEY = "token.type";           // トークンタイプ
     public static final String EXPIRES_IN_KEY = "token.expire";
     public static final String REFRESH_TOKEN_KEY = "token.refresh";     // リフレッシュトークン
-
 
     // Utilなのでコンストラクタを生成しない
     private PreferenceUtil(){}
@@ -27,7 +27,7 @@ public class PreferenceUtil {
      * @return
      */
     public static String getFindById (Context context, String key) {
-        SharedPreferences sp = context.getSharedPreferences(PREF_FILE_NAME, Context.MODE_PRIVATE);
+        SharedPreferences sp = context.getSharedPreferences(PREF_TOKEN_FILE, Context.MODE_PRIVATE);
 
         String result = sp.getString(key, null);
 
@@ -35,6 +35,6 @@ public class PreferenceUtil {
     }
 
     public static SharedPreferences.Editor getEditor(Context context){
-        return context.getSharedPreferences(PREF_FILE_NAME, Context.MODE_PRIVATE).edit();
+        return context.getSharedPreferences(PREF_TOKEN_FILE, Context.MODE_PRIVATE).edit();
     }
 }

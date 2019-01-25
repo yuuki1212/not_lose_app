@@ -1,12 +1,13 @@
 package com.example.kirin_dev31.toreger.views.activity;
 
+import android.accounts.AccountAuthenticatorActivity;
 import android.app.Activity;
 import android.os.Bundle;
 
 import com.example.kirin_dev31.toreger.R;
 import com.example.kirin_dev31.toreger.views.fragments.authorization.LoginFragment;
 
-public class AuthorizationActivity extends Activity {
+public class AuthorizationActivity extends AccountAuthenticatorActivity {
     @Override
     public void onCreate(final Bundle saveInstanceState) {
         super.onCreate(saveInstanceState);

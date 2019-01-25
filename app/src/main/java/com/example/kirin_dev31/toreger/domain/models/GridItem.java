@@ -2,7 +2,7 @@ package com.example.kirin_dev31.toreger.domain.models;
 
 import java.util.Date;
 
-public class GridItem {
+public class GridItem extends ApiModel {
     public Space space;
     public Item item;
 
